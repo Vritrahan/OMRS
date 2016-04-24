@@ -26,7 +26,7 @@ public partial class Home : System.Web.UI.Page
         DataTable dt = ds.Tables["Login"];
         DataRow dr = dt.Rows[0];
         String a = dr["eMail"].ToString();
-        UserLabel.Text = "Welcome, " + a;
+        UserLabel.Text = "Welcome, " + a;/*
         OleDbCommand cmd1 = new OleDbCommand("select title as title,artist as artist,path as path,rating as rating from (select * from songs left outer join ratings) as t where songs.ID=Ratings.songs_id and ratings.user_id=" + ID, conn);
         cmd1.CommandType = CommandType.Text;
         OleDbDataAdapter adap1 = new OleDbDataAdapter(cmd.CommandText, conn);
@@ -40,7 +40,7 @@ public partial class Home : System.Web.UI.Page
             ListView1.DataSource = dt1;
         }
         ListView1.DataSourceID = null;
-        ListView1.DataBind();
+        ListView1.DataBind();*/
         conn.Close();
     }
     private void Connect()
